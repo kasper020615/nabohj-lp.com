@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabo Hjælp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Nabo Hjælp</h1>
+        <div id="auth-section">
+            <h2>Log ind eller opret en konto</h2>
+            <form id="login-form">
+                <label for="login-contact">Email eller telefonnummer:</label>
+                <input type="text" id="login-contact" required>
+                <label for="login-password">Adgangskode:</label>
+                <input type="password" id="login-password" required>
+                <button type="submit">Log ind</button>
+            </form>
+            <p>eller</p>
+            <form id="signup-form">
+                <label for="name">Navn:</label>
+                <input type="text" id="name" required>
+                <label for="address">Adresse:</label>
+                <input type="text" id="address" required>
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email">
+                <label for="signup-phone">Telefonnummer:</label>
+                <input type="tel" id="signup-phone">
+                <label for="signup-password">Adgangskode:</label>
+                <input type="password" id="signup-password" required>
+                <button type="submit">Opret konto</button>
+            </form>
+        </div>
+        <div id="message-section" style="display: none;">
+            <h2>Skriv til dine naboer</h2>
+            <form id="message-form">
+                <label for="neighbor-name">Nabos navn:</label>
+                <input type="text" id="neighbor-name" required>
+                <label for="neighbor-contact">Nabos telefonnummer eller email:</label>
+                <input type="text" id="neighbor-contact" required>
+                <label for="message">Besked:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">Send besked</button>
+            </form>
+            <div>
+                <button id="view-messages-button">Se beskeder (<span id="unread-count">0</span>)</button>
+                <div id="messages-list" style="display: none;">
+                    <h3>Dine beskeder</h3>
+                    <ul id="messages"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
